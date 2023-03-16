@@ -4,7 +4,7 @@ Inspired by [Clang and LLVM made cross compiling easy](https://mcilloni.ovh/2021
 
 Basiclly you only need [sysroot + llvm/clang + some bash scripts], can do lots of cross compiling.
 
-So I extract linux(arm & x86) sysroot from docker container, and download windows sysroot form [winlibs](https://winlibs.com/).
+So I [extract](extract-sysroot-from-docker.sh) linux(arm & x86) sysroot from docker container, and download windows sysroot form [winlibs](https://winlibs.com/).
 
 total:
 
@@ -15,7 +15,7 @@ total:
 - i686-w64-windows-gnu
 - x86_64-w64-windows-gnu
 
-for now 
+All above baked in *[zlib & openssl & boost]* prebuilt libs
 
 # Install using Homebrew(on macos or linux)
 
