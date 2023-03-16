@@ -18,9 +18,8 @@ class Aarch64AlpineLinuxMusl < Formula
       coreutils_prefix = Formula["coreutils"].prefix
       # ohai "llvm_prefix=#{llvm_prefix}"
       cd prefix do
+        # self construct bin, so not need bin.install ...
         system "./link-bin.sh", llvm_prefix, coreutils_prefix
-        bin.install Dir["bin/*"]
-        # Dir.glob("./bin/*") {|file| bin.install file}
       end
     end
   end
