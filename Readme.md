@@ -15,7 +15,7 @@ total:
 - i686-w64-windows-gnu
 - x86_64-w64-windows-gnu
 
-All above baked in *[zlib & openssl & boost]* prebuilt libs
+All above baked in *[zlib & openssl & boost_1_81_0]* prebuilt libs
 
 # Install using Homebrew(on macos or linux)
 
@@ -34,4 +34,6 @@ etc.
     armv7-alpine-linux-musl-c++ main.cpp
     ...
 
-examples for cmake/meson/autotools build to be continued
+autotools/b2 cross build can refer to [example/win-zlib-openssl-boost.sh](example/win-zlib-openssl-boost.sh)
+
+examples for cmake/meson build to be continued
