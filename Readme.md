@@ -36,4 +36,4 @@ etc.
 
 autotools/b2 cross build can refer to [example/win-zlib-openssl-boost.sh](example/win-zlib-openssl-boost.sh)
 
-examples for cmake/meson build to be continued
+cmake build example in [cmake-build-test.sh](cmake-build-test.sh)
