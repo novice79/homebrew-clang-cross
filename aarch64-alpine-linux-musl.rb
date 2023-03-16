@@ -2,7 +2,7 @@ class Aarch64AlpineLinuxMusl < Formula
     desc "aarch64 Linux MUSL Toolchain"
     homepage "https://github.com/novice79/homebrew-clang-cross"
     url "https://github.com/novice79/homebrew-clang-cross/releases/download/v1.0.0/aarch64-alpine-linux-musl.tar.gz"
-    sha256 "8b999487ca2f8e8b80b42ad4e2c356ab9dc80387e0dd3824526274b10346c065"
+    sha256 "ea52a459e40aa6ce2a3f3a74b1e812c143aef9a5f7a53c8ec65328fc5d1aa851"
     version "1.0.1"
   
     depends_on "bash"
@@ -15,11 +15,12 @@ class Aarch64AlpineLinuxMusl < Formula
     def install
       prefix.install Dir["./*"]
       llvm_prefix = Formula["llvm"].prefix
-      ohai "llvm_prefix=#{llvm_prefix}"
+      coreutils_prefix = Formula["coreutils"].prefix
+      # ohai "llvm_prefix=#{llvm_prefix}"
       cd prefix do
-        system "./link-bin.sh", llvm_prefix
+        system "./link-bin.sh", llvm_prefix, coreutils_prefix
+        bin.install Dir["bin/*"]
+        # Dir.glob("./bin/*") {|file| bin.install file}
       end
-      
-      Dir.glob(prefix/"bin/*") {|file| bin.install_symlink file}
     end
   end
