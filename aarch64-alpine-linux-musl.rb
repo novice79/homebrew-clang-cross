@@ -3,7 +3,7 @@ class Aarch64AlpineLinuxMusl < Formula
     homepage "https://github.com/novice79/homebrew-clang-cross"
     url "https://github.com/novice79/homebrew-clang-cross/releases/download/v1.0.0/aarch64-alpine-linux-musl.tar.gz"
     sha256 "8b999487ca2f8e8b80b42ad4e2c356ab9dc80387e0dd3824526274b10346c065"
-    version "1.0.0"
+    version "1.0.1"
   
     depends_on "bash"
     depends_on "coreutils"
