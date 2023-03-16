@@ -2,7 +2,7 @@ class Armv7AlpineLinuxMusl < Formula
     desc "armv7 Linux MUSL Toolchain"
     homepage "https://github.com/novice79/homebrew-clang-cross"
     url "https://github.com/novice79/homebrew-clang-cross/releases/download/v1.0.0/armv7-alpine-linux-musl.tar.gz"
-    sha256 "8d4b348a706197caec38adb0164aacc70b868b38f04d8a241d0bf351f1d2a1e2"
+    sha256 "d5f8bcc78952b349dcbd6ceaa2637febfb4bdc60cce4fc7917a06b28a8e6c391"
     version "1.0.0"
   
     depends_on "bash"
