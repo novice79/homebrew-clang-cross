@@ -2,8 +2,8 @@ class X8664W64WindowsGnu < Formula
     desc "Windows x86_64 mingw Toolchain"
     homepage "https://github.com/novice79/homebrew-clang-cross"
     url "https://github.com/novice79/homebrew-clang-cross/releases/download/v1.0.0/x86_64-w64-windows-gnu.tar.gz"
-    sha256 "e3aca556266088b04a782013ad7dd1158887ad2a1d5e70946a31cc28c6dddf86"
-    version "1.0.0"
+    sha256 "75d5b762af4bc1e99fa8c00767759988f05cbf891c636c08067ee75472ed444b"
+    version "1.0.1"
   
     depends_on "bash"
     depends_on "coreutils"
