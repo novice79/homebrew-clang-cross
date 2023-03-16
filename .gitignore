@@ -1,0 +1,8 @@
+/_build/
+.vagrant/
+.vscode/
+/bak/
+/release/
+/dist/
+/cross/
+Vagrantfile
