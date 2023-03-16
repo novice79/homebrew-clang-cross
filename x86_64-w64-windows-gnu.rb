@@ -1,4 +1,4 @@
-class I686W64WindowsGnu < Formula
+class X8664W64WindowsGnu < Formula
     desc "Windows x86_64 mingw Toolchain"
     homepage "https://github.com/novice79/homebrew-clang-cross"
     url "https://github.com/novice79/homebrew-clang-cross/releases/download/v1.0.0/x86_64-w64-windows-gnu.tar.gz"
