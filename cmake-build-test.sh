@@ -9,16 +9,20 @@ dir=_build/test
 
 target=( 
     armv6-alpine-linux-musl
-    armv7-alpine-linux-musl
-    aarch64-alpine-linux-musl
-    x86_64-alpine-linux-musl
-    i686-w64-windows-gnu
-    x86_64-w64-windows-gnu
+    # armv7-alpine-linux-musl
+    # aarch64-alpine-linux-musl
+    # x86_64-alpine-linux-musl
+    # i686-w64-windows-gnu
+    # x86_64-w64-windows-gnu
 )
 for i in "${target[@]}";do
-    brew list $i &>/dev/null || continue
-    tcf="$(brew --prefix $i)/toolchain.cmake"
-    [ -f "$tcf" ] && echo "use cmake toolchain file: $tcf" || continue
+    if [[ -f "$PWD/cross/$i/toolchain.cmake" ]];then 
+        tcf="$PWD/cross/$i/toolchain.cmake"
+    else
+        brew list $i &>/dev/null || continue
+        tcf="$(brew --prefix $i)/toolchain.cmake"
+        [ -f "$tcf" ] && echo "use cmake toolchain file: $tcf" || continue
+    fi
     rm -rf "$dir"
     PREFIX="dist/$i"
     cmake -H"test" -B"$dir" \

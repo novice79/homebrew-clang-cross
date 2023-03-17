@@ -13,13 +13,16 @@ boost_dep = dependency(
         'log_setup', 
         'log', 
         'program_options',
-        'system' 
+        'system',
+        'url'
     ]
 )
 thread_dep = dependency('threads')
+lib = static_library('mylib', 'lib.cpp')
 executable(
     'main', 
     'main.cpp', 
+    link_with : lib,
     install : true, install_dir : '.',
     dependencies : [zdep, openssldep, boost_dep, thread_dep]
 )

@@ -1,4 +1,4 @@
-#include <iostream>
+#include "lib.h"
 #if defined(_WIN32)
 #include <windows.h>
 #endif
@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
     #endif
     
     cout<< "你好，世界😄\n";
+    parse_url("https://user:pass@example.com:443/path/to/my%2dfile.txt?id=42&name=John%20Doe+Jingleheimer%2DSchmidt#page%20anchor");
     json::object obj;                                               // construct an empty object
     obj[ "pi" ] = 3.141;                                            // insert a double
     obj[ "happy" ] = true;                                          // insert a bool
